@@ -68,6 +68,15 @@ ping 127.0.0.1 -n 300 > nul]]></param>
         <artifact sourcePath="FarEng.hlf&#xD;&#xA;FarEng.lng&#xD;&#xA;FarRus.hlf&#xD;&#xA;FarRus.lng" />
       </dependency>
     </artifact-dependencies>
+    <dependencies>
+      <depend-on sourceBuildTypeId="ForCleanup20_ArtifactRule">
+        <options>
+          <option name="run-build-if-dependency-failed" value="RUN_ADD_PROBLEM" />
+          <option name="take-started-build-with-same-revisions" value="true" />
+          <option name="take-successful-builds-only" value="true" />
+        </options>
+      </depend-on>
+    </dependencies>
     <cleanup />
   </settings>
 </build-type>
