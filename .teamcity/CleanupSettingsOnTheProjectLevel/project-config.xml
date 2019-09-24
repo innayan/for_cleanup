@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="ForCleanup20" uuid="835cd833-539f-4eef-b8ff-c32407f94512" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>cleanup settings on the project level</name>
+  <parameters />
+  <cleanup>
+    <policy type="builds" cleanup-level="EVERYTHING">
+      <parameters>
+        <param name="keepBuilds.count" value="5" />
+      </parameters>
+    </policy>
+    <policy type="builds" cleanup-level="HISTORY_ENTRY">
+      <parameters>
+        <param name="keepBuilds.count" value="5" />
+      </parameters>
+    </policy>
+    <policy type="builds" cleanup-level="ARTIFACTS">
+      <parameters>
+        <param name="artifactPatterns" value="**/*.*" />
+        <param name="keepBuilds.count" value="5" />
+      </parameters>
+    </policy>
+  </cleanup>
+</project>
+

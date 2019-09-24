@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="7f778dc8-8eb4-4b36-862d-149a0a762794" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>far_template</name>
+  <settings>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_147" name="fartemplate_comamnd_line" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="r" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_154" name="template step" type="VS.Solution">
+        <parameters>
+          <param name="build-file-path" value="we" />
+          <param name="msbuild_version" value="16.0" />
+          <param name="run-platform" value="x86" />
+          <param name="targets" value="Rebuild" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="toolsVersion" value="Current" />
+          <param name="vs.version" value="vs2019" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <build-extensions>
+      <extension id="jetbrains.agent.free.space" type="jetbrains.agent.free.space">
+        <parameters>
+          <param name="free-space-work" value="3gb" />
+        </parameters>
+      </extension>
+      <extension id="KEEP_RULE_1" type="keepRules">
+        <parameters>
+          <param name="keepData.1.artifactsPatterns" value="templatre" />
+          <param name="keepData.1.type" value="artifacts" />
+          <param name="keepData.2.type" value="logs" />
+          <param name="keepData.3.type" value="history" />
+          <param name="keepData.4.type" value="statistics" />
+          <param name="limit.type" value="all" />
+          <param name="preserveArtifacts" value="true" />
+          <param name="ruleDisabled" value="false" />
+        </parameters>
+      </extension>
+    </build-extensions>
+    <cleanup />
+  </settings>
+</template>
+

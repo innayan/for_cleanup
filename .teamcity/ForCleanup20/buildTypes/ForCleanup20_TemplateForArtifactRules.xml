@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="e216edb5-70c8-4e66-86ff-559fb4f25e58" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>template_for artifact_rules</name>
+  <settings>
+    <options>
+      <option name="artifactRules" value="**/*.zip&#xA;aaa.html&#xA;.svn\wc.db" />
+    </options>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_144" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[echo test
+rem This is a custom script written by TeamCity using windows-1252 charset.
+rem echo ##teamcity[compilationStarted compiler='compiler']
+rem echo ##teamcity[message text='This is a compilation error' errorDetails='Some details' status='ERROR']
+rem echo ##teamcity[compilationFinished compiler='compiler']
+rem echo ##teamcity[buildProblem description='this is a build problem']
+ping 127.0.0.1 -n 2 > nul
+rem exit 1]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="ForCleanup20_SvnHttpsLocalhost8443svnArtifacts" />
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <build-extensions>
+      <extension id="KEEP_RULE_4" type="keepRules">
+        <parameters>
+          <param name="keepData.1.artifactsPatterns" value="+:**/*Test*" />
+          <param name="keepData.1.type" value="artifacts" />
+          <param name="keepData.2.type" value="logs" />
+          <param name="keepData.3.type" value="history" />
+          <param name="keepData.4.type" value="statistics" />
+          <param name="limit.buildsCount" value="3" />
+          <param name="limit.type" value="keepLastNBuilds" />
+          <param name="preserveArtifacts" value="true" />
+          <param name="ruleDisabled" value="false" />
+        </parameters>
+      </extension>
+      <extension id="KEEP_RULE_16" type="keepRules">
+        <parameters>
+          <param name="keepData.1.artifactsPatterns" value="kjlh,mn" />
+          <param name="keepData.1.type" value="artifacts" />
+          <param name="keepData.2.type" value="logs" />
+          <param name="keepData.3.type" value="history" />
+          <param name="keepData.4.type" value="statistics" />
+          <param name="limit.type" value="all" />
+          <param name="preserveArtifacts" value="true" />
+          <param name="ruleDisabled" value="false" />
+        </parameters>
+      </extension>
+    </build-extensions>
+    <cleanup />
+  </settings>
+</template>
+

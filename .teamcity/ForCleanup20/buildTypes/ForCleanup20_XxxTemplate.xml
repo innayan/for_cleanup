@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="528dec67-027c-4cce-837e-209dfc5b8fcb" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>xxx_template</name>
+  <settings>
+    <parameters />
+    <build-runners />
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <build-extensions>
+      <extension id="KEEP_RULE_13" type="keepRules">
+        <parameters>
+          <param name="keepData.1.type" value="everything" />
+          <param name="keepData.2.artifactsPatterns" value="" />
+          <param name="keepData.2.type" value="artifacts" />
+          <param name="keepData.3.type" value="logs" />
+          <param name="keepData.4.type" value="history" />
+          <param name="keepData.5.type" value="statistics" />
+          <param name="limit.type" value="all" />
+          <param name="preserveArtifacts" value="true" />
+          <param name="ruleDisabled" value="false" />
+        </parameters>
+      </extension>
+    </build-extensions>
+    <cleanup />
+  </settings>
+</template>
+
