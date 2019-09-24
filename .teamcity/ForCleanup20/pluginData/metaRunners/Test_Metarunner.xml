@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<meta-runner name="Test Metarunner">
+  <description>Test meta runner</description>
+  <settings>
+    <parameters>
+      <param name="token" value="zxxc8d45429c230eb46" spec="password description='Password'" />
+    </parameters>
+    <build-runners>
+      <runner name="Run plugin uploader" type="simpleRunner">
+        <parameters>
+          <param name="command.executable" value="%env.JDK_18%/bin/java" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <requirements />
+  </settings>
+</meta-runner>
+
