@@ -5,6 +5,7 @@
   <settings>
     <options>
       <option name="artifactRules" value="Test123.zip" />
+      <option name="showDependenciesChanges" value="true" />
     </options>
     <disabled-settings>
       <setting-ref ref="TRIGGER_13" />
