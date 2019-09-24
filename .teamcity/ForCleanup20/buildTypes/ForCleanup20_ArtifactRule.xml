@@ -8,6 +8,7 @@
     </options>
     <disabled-settings>
       <setting-ref ref="BUILD_EXT_36" />
+      <setting-ref ref="RUNNER_144" />
       <setting-ref ref="RUNNER_147" />
       <setting-ref ref="RUNNER_154" />
       <setting-ref ref="TRIGGER_13" />
