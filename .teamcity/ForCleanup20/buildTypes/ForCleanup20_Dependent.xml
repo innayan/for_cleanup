@@ -65,7 +65,7 @@ ping 127.0.0.1 -n 300 > nul]]></param>
     <artifact-dependencies>
       <dependency id="ARTIFACT_DEPENDENCY_1" sourceBuildTypeId="ForCleanup20_ArtifactRule" cleanDestination="false">
         <revisionRule name="sameChainOrLastFinished" revision="latest.sameChainOrLastFinished" />
-        <artifact sourcePath="Test123.zip&#xD;&#xA;Test123prod.zip" />
+        <artifact sourcePath="Test123.zip&#xD;&#xA;Test123prod.zip&#xD;&#xA;aaa.html&#xD;&#xA;FarEng.hlf&#xD;&#xA;FarEng.lng&#xD;&#xA;FarRus.hlf&#xD;&#xA;FarRus.lng" />
       </dependency>
     </artifact-dependencies>
     <dependencies>
