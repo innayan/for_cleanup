@@ -4,7 +4,14 @@
   <description />
   <settings>
     <parameters />
-    <build-runners />
+    <build-runners>
+      <runner id="RUNNER_161" name="mystep" type="Test_Metarunner">
+        <parameters>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="token" value="zxxc8d45429c230eb46" />
+        </parameters>
+      </runner>
+    </build-runners>
     <vcs-settings />
     <requirements />
     <build-triggers />
