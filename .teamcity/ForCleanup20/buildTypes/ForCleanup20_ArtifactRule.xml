@@ -4,7 +4,7 @@
   <description />
   <settings ref="ForCleanup20_FarTemplate">
     <options>
-      <option name="artifactRules" value="**/*.zip&#xA;aaa.html&#xA;.svn\wc.db&#xA;*FAR*" />
+      <option name="artifactRules" value="**/*.zip&#xA;.svn\wc.db&#xA;*FAR*" />
     </options>
     <disabled-settings>
       <setting-ref ref="BUILD_EXT_36" />
