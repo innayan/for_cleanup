@@ -71,7 +71,8 @@ ping 127.0.0.1 -n 300 > nul]]></param>
     <dependencies>
       <depend-on sourceBuildTypeId="ForCleanup20_ArtifactRule">
         <options>
-          <option name="run-build-if-dependency-failed" value="RUN_ADD_PROBLEM" />
+          <option name="run-build-if-dependency-failed" value="RUN" />
+          <option name="take-started-build-with-same-revisions" value="true" />
         </options>
       </depend-on>
     </dependencies>
