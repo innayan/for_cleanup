@@ -127,6 +127,16 @@ rem exit 1]]></param>
           <param name="ruleDisabled" value="false" />
         </parameters>
       </extension>
+      <extension id="KEEP_RULE_8" type="keepRules">
+        <parameters>
+          <param name="keepData.1.type" value="logs" />
+          <param name="keepData.2.type" value="history" />
+          <param name="keepData.3.type" value="statistics" />
+          <param name="limit.type" value="all" />
+          <param name="preserveArtifacts" value="true" />
+          <param name="ruleDisabled" value="false" />
+        </parameters>
+      </extension>
     </build-extensions>
     <cleanup>
       <policy type="days" cleanup-level="EVERYTHING">
