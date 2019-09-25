@@ -2,10 +2,7 @@
 <build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="fe1d8a98-57ce-48fa-8fd7-2833927ceffa" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
   <name>Artifact rule</name>
   <description />
-  <settings>
-    <options>
-      <option name="artifactRules" value="**/*.zip&#xA;.svn\wc.db&#xA;*FAR*" />
-    </options>
+  <settings ref="ForCleanup20_FormArtifactRule">
     <disabled-settings>
       <setting-ref ref="BUILD_EXT_36" />
       <setting-ref ref="RUNNER_144" />
@@ -13,10 +10,8 @@
       <setting-ref ref="RUNNER_154" />
       <setting-ref ref="TRIGGER_13" />
     </disabled-settings>
-    <parameters>
-      <param name="test" value="123" spec="text display='hidden' validationMode='any'" />
-    </parameters>
-    <build-runners>
+    <parameters />
+    <build-runners order="RUNNER_147, RUNNER_154, RUNNER_144, RUNNER_157, RUNNER_158">
       <runner id="RUNNER_147" name="fartemplate_comamnd_line" type="simpleRunner">
         <parameters>
           <param name="script.content" value="r" />
@@ -59,24 +54,8 @@ rem exit 1]]></param>
           <param name="use.custom.script" value="true" />
         </parameters>
       </runner>
-      <runner id="RUNNER_157" name="" type="simpleRunner">
-        <parameters>
-          <param name="script.content" value="ping 127.0.0.1 -n 20 &gt; nul" />
-          <param name="teamcity.step.mode" value="execute_if_failed" />
-          <param name="use.custom.script" value="true" />
-        </parameters>
-      </runner>
-      <runner id="RUNNER_158" name="" type="simpleRunner">
-        <parameters>
-          <param name="script.content" value="ping 127.0.0.1 -n 20 &gt; nul" />
-          <param name="teamcity.step.mode" value="execute_if_failed" />
-          <param name="use.custom.script" value="true" />
-        </parameters>
-      </runner>
     </build-runners>
-    <vcs-settings>
-      <vcs-entry-ref root-id="ForCleanup20_SvnHttpsLocalhost8443svnArtifacts" />
-    </vcs-settings>
+    <vcs-settings />
     <requirements />
     <build-triggers>
       <build-trigger id="TRIGGER_13" type="schedulingTrigger">
@@ -109,96 +88,8 @@ rem exit 1]]></param>
           <param name="buildFailureOnMessage.reverse" value="false" />
         </parameters>
       </extension>
-      <extension id="KEEP_RULE_3" type="keepRules">
-        <parameters>
-          <param name="keepData.1.type" value="everything" />
-          <param name="keepData.2.artifactsPatterns" value="+:**/*" />
-          <param name="keepData.2.type" value="artifacts" />
-          <param name="keepData.3.type" value="logs" />
-          <param name="keepData.4.type" value="history" />
-          <param name="keepData.5.type" value="statistics" />
-          <param name="limit.daysCount" value="4" />
-          <param name="limit.type" value="keepNDaysSinceLastBuild" />
-          <param name="preserveArtifacts" value="true" />
-          <param name="ruleDisabled" value="true" />
-        </parameters>
-      </extension>
-      <extension id="KEEP_RULE_6" type="keepRules">
-        <parameters>
-          <param name="keepData.1.type" value="statistics" />
-          <param name="limit.type" value="all" />
-          <param name="preserveArtifacts" value="true" />
-          <param name="ruleDisabled" value="true" />
-        </parameters>
-      </extension>
-      <extension id="KEEP_RULE_7" type="keepRules">
-        <parameters>
-          <param name="keepData.1.type" value="everything" />
-          <param name="keepData.2.artifactsPatterns" value="+:**/*" />
-          <param name="keepData.2.type" value="artifacts" />
-          <param name="keepData.3.type" value="logs" />
-          <param name="keepData.4.type" value="history" />
-          <param name="keepData.5.type" value="statistics" />
-          <param name="limit.buildsCount" value="30" />
-          <param name="limit.type" value="keepLastNSuccessfulBuilds" />
-          <param name="preserveArtifacts" value="true" />
-          <param name="ruleDisabled" value="true" />
-        </parameters>
-      </extension>
-      <extension id="KEEP_RULE_8" type="keepRules">
-        <parameters>
-          <param name="keepData.1.type" value="logs" />
-          <param name="keepData.2.type" value="history" />
-          <param name="keepData.3.type" value="statistics" />
-          <param name="limit.type" value="all" />
-          <param name="preserveArtifacts" value="true" />
-          <param name="ruleDisabled" value="true" />
-        </parameters>
-      </extension>
-      <extension id="KEEP_RULE_19" type="keepRules">
-        <parameters>
-          <param name="keepData.1.artifactsPatterns" value="+:**/*" />
-          <param name="keepData.1.type" value="artifacts" />
-          <param name="keepData.2.type" value="history" />
-          <param name="keepData.3.type" value="statistics" />
-          <param name="limit.type" value="all" />
-          <param name="preserveArtifacts" value="true" />
-          <param name="ruleDisabled" value="true" />
-        </parameters>
-      </extension>
-      <extension id="KEEP_RULE_20" type="keepRules">
-        <parameters>
-          <param name="keepData.1.type" value="everything" />
-          <param name="keepData.2.artifactsPatterns" value="+:**/*" />
-          <param name="keepData.2.type" value="artifacts" />
-          <param name="keepData.3.type" value="logs" />
-          <param name="keepData.4.type" value="history" />
-          <param name="keepData.5.type" value="statistics" />
-          <param name="limit.buildsCount" value="30" />
-          <param name="limit.type" value="keepLastNSuccessfulBuilds" />
-          <param name="preserveArtifacts" value="true" />
-          <param name="ruleDisabled" value="true" />
-        </parameters>
-      </extension>
-      <extension id="jetbrains.agent.free.space" type="jetbrains.agent.free.space">
-        <parameters>
-          <param name="free-space-work" value="3gb" />
-        </parameters>
-      </extension>
     </build-extensions>
-    <cleanup>
-      <policy type="days" cleanup-level="EVERYTHING">
-        <parameters>
-          <param name="keepDays.count" value="3" />
-        </parameters>
-      </policy>
-      <policy type="days" cleanup-level="ARTIFACTS">
-        <parameters>
-          <param name="artifactPatterns" value="**/*.*" />
-          <param name="keepDays.count" value="1" />
-        </parameters>
-      </policy>
-    </cleanup>
+    <cleanup />
   </settings>
 </build-type>
 
