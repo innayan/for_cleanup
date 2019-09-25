@@ -2,7 +2,7 @@
 <build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="fe1d8a98-57ce-48fa-8fd7-2833927ceffa" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
   <name>Artifact rule</name>
   <description />
-  <settings ref="ForCleanup20_FarTemplate">
+  <settings>
     <options>
       <option name="artifactRules" value="**/*.zip&#xA;.svn\wc.db&#xA;*FAR*" />
     </options>
@@ -17,6 +17,24 @@
       <param name="test" value="123" spec="text display='hidden' validationMode='any'" />
     </parameters>
     <build-runners>
+      <runner id="RUNNER_147" name="fartemplate_comamnd_line" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="r" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_154" name="template step" type="VS.Solution">
+        <parameters>
+          <param name="build-file-path" value="we" />
+          <param name="msbuild_version" value="16.0" />
+          <param name="run-platform" value="x86" />
+          <param name="targets" value="Rebuild" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="toolsVersion" value="Current" />
+          <param name="vs.version" value="vs2019" />
+        </parameters>
+      </runner>
       <runner id="RUNNER_144" name="" type="simpleRunner">
         <parameters>
           <param name="script.content"><![CDATA[echo test
@@ -160,6 +178,11 @@ rem exit 1]]></param>
           <param name="limit.type" value="keepLastNSuccessfulBuilds" />
           <param name="preserveArtifacts" value="true" />
           <param name="ruleDisabled" value="true" />
+        </parameters>
+      </extension>
+      <extension id="jetbrains.agent.free.space" type="jetbrains.agent.free.space">
+        <parameters>
+          <param name="free-space-work" value="3gb" />
         </parameters>
       </extension>
     </build-extensions>
