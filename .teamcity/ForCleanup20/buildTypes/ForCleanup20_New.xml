@@ -42,6 +42,8 @@
           <param name="filters.2.type" value="personalBuild" />
           <param name="filters.3.status" value="successful" />
           <param name="filters.3.type" value="buildStatus" />
+          <param name="filters.4.tagsList" value="tag1" />
+          <param name="filters.4.type" value="tags" />
           <param name="keepData.1.type" value="everything" />
           <param name="keepData.2.artifactsPatterns" value="+:**/*" />
           <param name="keepData.2.type" value="artifacts" />
