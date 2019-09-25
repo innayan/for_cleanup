@@ -91,6 +91,20 @@ rem exit 1]]></param>
           <param name="buildFailureOnMessage.reverse" value="false" />
         </parameters>
       </extension>
+      <extension id="KEEP_RULE_3" type="keepRules">
+        <parameters>
+          <param name="keepData.1.type" value="everything" />
+          <param name="keepData.2.artifactsPatterns" value="+:**/*" />
+          <param name="keepData.2.type" value="artifacts" />
+          <param name="keepData.3.type" value="logs" />
+          <param name="keepData.4.type" value="history" />
+          <param name="keepData.5.type" value="statistics" />
+          <param name="limit.daysCount" value="4" />
+          <param name="limit.type" value="keepNDaysSinceLastBuild" />
+          <param name="preserveArtifacts" value="true" />
+          <param name="ruleDisabled" value="false" />
+        </parameters>
+      </extension>
     </build-extensions>
     <cleanup>
       <policy type="days" cleanup-level="EVERYTHING">
