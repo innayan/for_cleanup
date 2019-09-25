@@ -41,7 +41,7 @@
           <param name="limit.daysCount" value="4" />
           <param name="limit.type" value="keepNDaysSinceLastBuild" />
           <param name="preserveArtifacts" value="true" />
-          <param name="ruleDisabled" value="true" />
+          <param name="ruleDisabled" value="false" />
         </parameters>
       </extension>
       <extension id="KEEP_RULE_6" type="keepRules">
