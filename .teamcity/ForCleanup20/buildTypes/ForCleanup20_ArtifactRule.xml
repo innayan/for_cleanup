@@ -110,6 +110,19 @@ rem exit 1]]></param>
           <param name="ruleDisabled" value="false" />
         </parameters>
       </extension>
+      <extension id="KEEP_RULE_7" type="keepRules">
+        <parameters>
+          <param name="keepData.1.artifactsPatterns" value="+:**/*1" />
+          <param name="keepData.1.type" value="artifacts" />
+          <param name="keepData.2.type" value="logs" />
+          <param name="keepData.3.type" value="history" />
+          <param name="keepData.4.type" value="statistics" />
+          <param name="limit.buildsCount" value="30" />
+          <param name="limit.type" value="keepLastNSuccessfulBuilds" />
+          <param name="preserveArtifacts" value="true" />
+          <param name="ruleDisabled" value="false" />
+        </parameters>
+      </extension>
     </build-extensions>
     <cleanup />
   </settings>
