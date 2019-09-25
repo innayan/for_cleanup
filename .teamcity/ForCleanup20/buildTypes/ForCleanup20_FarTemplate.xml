@@ -45,13 +45,7 @@
         </parameters>
       </extension>
     </build-extensions>
-    <cleanup>
-      <policy type="days" cleanup-level="HISTORY_ENTRY">
-        <parameters>
-          <param name="keepDays.count" value="12313" />
-        </parameters>
-      </policy>
-    </cleanup>
+    <cleanup />
   </settings>
 </template>
 
