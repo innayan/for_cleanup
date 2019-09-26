@@ -21,19 +21,6 @@
           <param name="ruleDisabled" value="false" />
         </parameters>
       </extension>
-      <extension id="KEEP_RULE_23" type="keepRules">
-        <parameters>
-          <param name="keepData.1.artifactsPatterns" value="+:*.new2" />
-          <param name="keepData.1.type" value="artifacts" />
-          <param name="keepData.2.type" value="logs" />
-          <param name="keepData.3.type" value="history" />
-          <param name="keepData.4.type" value="statistics" />
-          <param name="limit.buildsCount" value="1" />
-          <param name="limit.type" value="keepLastNBuilds" />
-          <param name="preserveArtifacts" value="false" />
-          <param name="ruleDisabled" value="false" />
-        </parameters>
-      </extension>
       <extension id="KEEP_RULE_24" type="keepRules">
         <parameters>
           <param name="filters.1.status" value="active" />
