@@ -11,6 +11,17 @@
           <param name="use.custom.script" value="true" />
         </parameters>
       </runner>
+      <runner id="RUNNER_164" name="" type="FxCop">
+        <parameters>
+          <param name="fxcop.detection_mode" value="auto" />
+          <param name="fxcop.fail_on_analysis_error" value="true" />
+          <param name="fxcop.files" value="ewewewewe" />
+          <param name="fxcop.search_in_gac" value="true" />
+          <param name="fxcop.version" value="not_specified" />
+          <param name="fxcop.what" value="files" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
     </build-runners>
     <vcs-settings />
     <requirements />
