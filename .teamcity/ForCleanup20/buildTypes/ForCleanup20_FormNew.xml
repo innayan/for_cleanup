@@ -11,7 +11,7 @@
         <parameters>
           <param name="fxcop.detection_mode" value="auto" />
           <param name="fxcop.fail_on_analysis_error" value="true" />
-          <param name="fxcop.files" value="wewe" />
+          <param name="fxcop.files" value="w777ewe" />
           <param name="fxcop.search_in_gac" value="true" />
           <param name="fxcop.version" value="not_specified" />
           <param name="fxcop.what" value="files" />
