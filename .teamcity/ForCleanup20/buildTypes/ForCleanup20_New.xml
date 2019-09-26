@@ -2,12 +2,19 @@
 <build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="4119ce3c-0b93-4581-b3c0-ad5d8fb7ad04" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
   <name>new</name>
   <description />
-  <settings ref="ForCleanup20_FarTemplate">
+  <settings>
     <parameters />
-    <build-runners order="RUNNER_163, RUNNER_147">
+    <build-runners>
       <runner id="RUNNER_163" name="" type="simpleRunner">
         <parameters>
           <param name="script.content" value="echo new" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_147" name="fartemplate_comamnd_line" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="r" />
           <param name="teamcity.step.mode" value="default" />
           <param name="use.custom.script" value="true" />
         </parameters>
@@ -62,6 +69,25 @@
           <param name="partitions.1.type" value="perBranch" />
           <param name="preserveArtifacts" value="true" />
           <param name="ruleDisabled" value="false" />
+        </parameters>
+      </extension>
+      <extension id="jetbrains.agent.free.space" type="jetbrains.agent.free.space">
+        <parameters>
+          <param name="free-space-work" value="3gb" />
+        </parameters>
+      </extension>
+      <extension id="KEEP_RULE_26" type="keepRules">
+        <parameters>
+          <param name="keepData.1.type" value="everything" />
+          <param name="keepData.2.artifactsPatterns" value="+:**/*" />
+          <param name="keepData.2.type" value="artifacts" />
+          <param name="keepData.3.type" value="logs" />
+          <param name="keepData.4.type" value="history" />
+          <param name="keepData.5.type" value="statistics" />
+          <param name="limit.daysCount" value="31330" />
+          <param name="limit.type" value="keepNDaysSinceLastBuild" />
+          <param name="preserveArtifacts" value="true" />
+          <param name="ruleDisabled" value="true" />
         </parameters>
       </extension>
     </build-extensions>
