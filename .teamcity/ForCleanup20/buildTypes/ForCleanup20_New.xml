@@ -8,42 +8,6 @@
     <vcs-settings />
     <requirements />
     <build-triggers />
-    <build-extensions>
-      <extension id="KEEP_RULE_22" type="keepRules">
-        <parameters>
-          <param name="keepData.1.artifactsPatterns" value="+:*.new1" />
-          <param name="keepData.1.type" value="artifacts" />
-          <param name="keepData.2.type" value="logs" />
-          <param name="keepData.3.type" value="history" />
-          <param name="keepData.4.type" value="statistics" />
-          <param name="limit.type" value="all" />
-          <param name="preserveArtifacts" value="true" />
-          <param name="ruleDisabled" value="false" />
-        </parameters>
-      </extension>
-      <extension id="KEEP_RULE_24" type="keepRules">
-        <parameters>
-          <param name="filters.1.status" value="active" />
-          <param name="filters.1.type" value="activeBranch" />
-          <param name="filters.2.personality" value="personal" />
-          <param name="filters.2.type" value="personalBuild" />
-          <param name="filters.3.status" value="successful" />
-          <param name="filters.3.type" value="buildStatus" />
-          <param name="filters.4.tagsList" value="tag1" />
-          <param name="filters.4.type" value="tags" />
-          <param name="keepData.1.type" value="everything" />
-          <param name="keepData.2.artifactsPatterns" value="+:**/*" />
-          <param name="keepData.2.type" value="artifacts" />
-          <param name="keepData.3.type" value="logs" />
-          <param name="keepData.4.type" value="history" />
-          <param name="keepData.5.type" value="statistics" />
-          <param name="limit.type" value="all" />
-          <param name="partitions.1.type" value="perBranch" />
-          <param name="preserveArtifacts" value="true" />
-          <param name="ruleDisabled" value="false" />
-        </parameters>
-      </extension>
-    </build-extensions>
     <cleanup />
   </settings>
 </build-type>
