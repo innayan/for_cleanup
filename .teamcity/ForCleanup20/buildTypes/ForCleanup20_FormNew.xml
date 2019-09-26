@@ -2,23 +2,8 @@
 <template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="73290ca2-09e1-4325-92a8-438bf24fc242" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
   <name>form new</name>
   <settings>
-    <disabled-settings>
-      <setting-ref ref="RUNNER_162" />
-    </disabled-settings>
     <parameters />
-    <build-runners>
-      <runner id="RUNNER_162" name="" type="FxCop">
-        <parameters>
-          <param name="fxcop.detection_mode" value="auto" />
-          <param name="fxcop.fail_on_analysis_error" value="true" />
-          <param name="fxcop.files" value="w777ewe" />
-          <param name="fxcop.search_in_gac" value="true" />
-          <param name="fxcop.version" value="not_specified" />
-          <param name="fxcop.what" value="files" />
-          <param name="teamcity.step.mode" value="default" />
-        </parameters>
-      </runner>
-    </build-runners>
+    <build-runners />
     <vcs-settings />
     <requirements />
     <build-triggers />
