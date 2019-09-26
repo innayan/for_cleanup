@@ -2,6 +2,9 @@
 <template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="7f778dc8-8eb4-4b36-862d-149a0a762794" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
   <name>far_template</name>
   <settings>
+    <disabled-settings>
+      <setting-ref ref="RUNNER_154" />
+    </disabled-settings>
     <parameters />
     <build-runners>
       <runner id="RUNNER_147" name="fartemplate_comamnd_line" type="simpleRunner">
