@@ -29,6 +29,8 @@
     <build-extensions>
       <extension id="KEEP_RULE_22" type="keepRules">
         <parameters>
+          <param name="filters.1.tagsList" value="form_new1" />
+          <param name="filters.1.type" value="tags" />
           <param name="keepData.1.artifactsPatterns" value="+:*.new1" />
           <param name="keepData.1.type" value="artifacts" />
           <param name="keepData.2.type" value="logs" />
