@@ -52,6 +52,8 @@
       </extension>
       <extension id="KEEP_RULE_31" type="keepRules">
         <parameters>
+          <param name="filters.1.tagsList" value="far_template2" />
+          <param name="filters.1.type" value="tags" />
           <param name="keepData.1.type" value="everything" />
           <param name="keepData.2.artifactsPatterns" value="+:**/*" />
           <param name="keepData.2.type" value="artifacts" />
