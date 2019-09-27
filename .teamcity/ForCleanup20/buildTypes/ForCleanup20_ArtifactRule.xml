@@ -2,7 +2,7 @@
 <build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="fe1d8a98-57ce-48fa-8fd7-2833927ceffa" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
   <name>Artifact rule</name>
   <description />
-  <settings>
+  <settings ref="ForCleanup20_FarTemplate">
     <options>
       <option name="artifactRules" value="**/*.zip&#xA;.svn\wc.db&#xA;*FAR*" />
     </options>
@@ -16,14 +16,7 @@
     <parameters>
       <param name="test" value="123" spec="text display='hidden' validationMode='any'" />
     </parameters>
-    <build-runners order="RUNNER_163, RUNNER_164, RUNNER_147, RUNNER_154, RUNNER_144, RUNNER_157, RUNNER_158">
-      <runner id="RUNNER_147" name="fartemplate_comamnd_line" type="simpleRunner">
-        <parameters>
-          <param name="script.content" value="r" />
-          <param name="teamcity.step.mode" value="default" />
-          <param name="use.custom.script" value="true" />
-        </parameters>
-      </runner>
+    <build-runners order="RUNNER_147, RUNNER_154, RUNNER_144, RUNNER_157, RUNNER_158">
       <runner id="RUNNER_154" name="template step" type="VS.Solution">
         <parameters>
           <param name="build-file-path" value="we" />
@@ -107,11 +100,6 @@ rem exit 1]]></param>
           <param name="buildFailureOnMessage.messagePattern" value="build" />
           <param name="buildFailureOnMessage.outputText" value="Failure" />
           <param name="buildFailureOnMessage.reverse" value="false" />
-        </parameters>
-      </extension>
-      <extension id="jetbrains.agent.free.space" type="jetbrains.agent.free.space">
-        <parameters>
-          <param name="free-space-work" value="3gb" />
         </parameters>
       </extension>
     </build-extensions>
