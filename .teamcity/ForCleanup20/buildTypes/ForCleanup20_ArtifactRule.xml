@@ -2,7 +2,10 @@
 <build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="fe1d8a98-57ce-48fa-8fd7-2833927ceffa" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
   <name>Artifact rule</name>
   <description />
-  <settings ref="ForCleanup20_FormArtifactRule">
+  <settings>
+    <options>
+      <option name="artifactRules" value="**/*.zip&#xA;.svn\wc.db&#xA;*FAR*" />
+    </options>
     <disabled-settings>
       <setting-ref ref="BUILD_EXT_36" />
       <setting-ref ref="RUNNER_144" />
@@ -10,7 +13,9 @@
       <setting-ref ref="RUNNER_154" />
       <setting-ref ref="TRIGGER_13" />
     </disabled-settings>
-    <parameters />
+    <parameters>
+      <param name="test" value="123" spec="text display='hidden' validationMode='any'" />
+    </parameters>
     <build-runners order="RUNNER_163, RUNNER_164, RUNNER_147, RUNNER_154, RUNNER_144, RUNNER_157, RUNNER_158">
       <runner id="RUNNER_147" name="fartemplate_comamnd_line" type="simpleRunner">
         <parameters>
@@ -54,8 +59,24 @@ rem exit 1]]></param>
           <param name="use.custom.script" value="true" />
         </parameters>
       </runner>
+      <runner id="RUNNER_157" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="ping 127.0.0.1 -n 20 &gt; nul" />
+          <param name="teamcity.step.mode" value="execute_if_failed" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_158" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="ping 127.0.0.1 -n 20 &gt; nul" />
+          <param name="teamcity.step.mode" value="execute_if_failed" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
     </build-runners>
-    <vcs-settings />
+    <vcs-settings>
+      <vcs-entry-ref root-id="ForCleanup20_SvnHttpsLocalhost8443svnArtifacts" />
+    </vcs-settings>
     <requirements />
     <build-triggers>
       <build-trigger id="TRIGGER_13" type="schedulingTrigger">
@@ -80,6 +101,53 @@ rem exit 1]]></param>
       </build-trigger>
     </build-triggers>
     <build-extensions>
+      <extension id="KEEP_RULE_22" type="keepRules">
+        <parameters>
+          <param name="keepData.1.artifactsPatterns" value="+:*.new1" />
+          <param name="keepData.1.type" value="artifacts" />
+          <param name="keepData.2.type" value="logs" />
+          <param name="keepData.3.type" value="history" />
+          <param name="keepData.4.type" value="statistics" />
+          <param name="limit.type" value="all" />
+          <param name="preserveArtifacts" value="true" />
+          <param name="ruleDisabled" value="false" />
+        </parameters>
+      </extension>
+      <extension id="KEEP_RULE_23" type="keepRules">
+        <parameters>
+          <param name="keepData.1.artifactsPatterns" value="+:*.new2" />
+          <param name="keepData.1.type" value="artifacts" />
+          <param name="keepData.2.type" value="logs" />
+          <param name="keepData.3.type" value="history" />
+          <param name="keepData.4.type" value="statistics" />
+          <param name="limit.buildsCount" value="1" />
+          <param name="limit.type" value="keepLastNBuilds" />
+          <param name="preserveArtifacts" value="false" />
+          <param name="ruleDisabled" value="false" />
+        </parameters>
+      </extension>
+      <extension id="KEEP_RULE_24" type="keepRules">
+        <parameters>
+          <param name="filters.1.status" value="active" />
+          <param name="filters.1.type" value="activeBranch" />
+          <param name="filters.2.personality" value="personal" />
+          <param name="filters.2.type" value="personalBuild" />
+          <param name="filters.3.status" value="successful" />
+          <param name="filters.3.type" value="buildStatus" />
+          <param name="filters.4.tagsList" value="tag1" />
+          <param name="filters.4.type" value="tags" />
+          <param name="keepData.1.type" value="everything" />
+          <param name="keepData.2.artifactsPatterns" value="+:**/*" />
+          <param name="keepData.2.type" value="artifacts" />
+          <param name="keepData.3.type" value="logs" />
+          <param name="keepData.4.type" value="history" />
+          <param name="keepData.5.type" value="statistics" />
+          <param name="limit.type" value="all" />
+          <param name="partitions.1.type" value="perBranch" />
+          <param name="preserveArtifacts" value="true" />
+          <param name="ruleDisabled" value="false" />
+        </parameters>
+      </extension>
       <extension id="BUILD_EXT_36" type="BuildFailureOnMessage">
         <parameters>
           <param name="buildFailureOnMessage.conditionType" value="contains" />
@@ -170,8 +238,25 @@ rem exit 1]]></param>
           <param name="ruleDisabled" value="false" />
         </parameters>
       </extension>
+      <extension id="jetbrains.agent.free.space" type="jetbrains.agent.free.space">
+        <parameters>
+          <param name="free-space-work" value="3gb" />
+        </parameters>
+      </extension>
     </build-extensions>
-    <cleanup />
+    <cleanup>
+      <policy type="days" cleanup-level="EVERYTHING">
+        <parameters>
+          <param name="keepDays.count" value="3" />
+        </parameters>
+      </policy>
+      <policy type="days" cleanup-level="ARTIFACTS">
+        <parameters>
+          <param name="artifactPatterns" value="**/*.*" />
+          <param name="keepDays.count" value="1" />
+        </parameters>
+      </policy>
+    </cleanup>
   </settings>
 </build-type>
 
