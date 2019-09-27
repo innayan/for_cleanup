@@ -2,7 +2,11 @@
 <build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="4119ce3c-0b93-4581-b3c0-ad5d8fb7ad04" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
   <name>new</name>
   <description />
-  <settings ref="ForCleanup20_FarTemplate">
+  <settings>
+    <inherits>
+      <ref id="ForCleanup20_FarTemplate" />
+      <ref id="ForCleanup20_FormNew" />
+    </inherits>
     <parameters />
     <build-runners />
     <vcs-settings />
