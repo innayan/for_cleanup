@@ -64,7 +64,7 @@
           <param name="filters.2.type" value="personalBuild" />
           <param name="filters.3.status" value="successful" />
           <param name="filters.3.type" value="buildStatus" />
-          <param name="filters.4.tagsList" value="form_new3" />
+          <param name="filters.4.tagsList" value="form_new3,form_new4,form_new5,form_new6,form_new7,form_new8,form_new_long_tag_to_check_what_happens_in_the_UI" />
           <param name="filters.4.type" value="tags" />
           <param name="keepData.1.type" value="everything" />
           <param name="keepData.2.artifactsPatterns" value="+:**/*" />
