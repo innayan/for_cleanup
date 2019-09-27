@@ -11,7 +11,7 @@
       <setting-ref ref="TRIGGER_13" />
     </disabled-settings>
     <parameters />
-    <build-runners order="RUNNER_147, RUNNER_154, RUNNER_144, RUNNER_157, RUNNER_158">
+    <build-runners order="RUNNER_163, RUNNER_164, RUNNER_147, RUNNER_154, RUNNER_144, RUNNER_157, RUNNER_158">
       <runner id="RUNNER_147" name="fartemplate_comamnd_line" type="simpleRunner">
         <parameters>
           <param name="script.content" value="r" />
