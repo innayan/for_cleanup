@@ -70,23 +70,7 @@
         </parameters>
       </extension>
     </build-extensions>
-    <cleanup>
-      <policy type="builds" cleanup-level="EVERYTHING">
-        <parameters>
-          <param name="keepBuilds.count" value="1" />
-        </parameters>
-      </policy>
-      <policy type="builds" cleanup-level="HISTORY_ENTRY">
-        <parameters>
-          <param name="keepBuilds.count" value="1" />
-        </parameters>
-      </policy>
-      <policy type="builds" cleanup-level="ARTIFACTS">
-        <parameters>
-          <param name="keepBuilds.count" value="1" />
-        </parameters>
-      </policy>
-    </cleanup>
+    <cleanup />
   </settings>
 </build-type>
 
