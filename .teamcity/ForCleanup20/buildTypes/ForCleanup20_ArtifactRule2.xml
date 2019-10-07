@@ -94,24 +94,7 @@
         <artifact sourcePath="FarRus.hlf" />
       </dependency>
     </artifact-dependencies>
-    <cleanup>
-      <policy type="daysAndBuilds" cleanup-level="HISTORY_ENTRY">
-        <parameters>
-          <param name="keepBuilds.count" value="555" />
-          <param name="keepDays.count" value="5555" />
-        </parameters>
-      </policy>
-      <policy type="daysAndBuilds" cleanup-level="ARTIFACTS">
-        <parameters>
-          <param name="artifactPatterns" value="55555555" />
-          <param name="keepBuilds.count" value="5" />
-          <param name="keepDays.count" value="5" />
-        </parameters>
-      </policy>
-      <options>
-        <option name="preventDependenciesArtifactsFromCleanup" value="true" />
-      </options>
-    </cleanup>
+    <cleanup />
   </settings>
 </build-type>
 
