@@ -94,27 +94,7 @@
         <artifact sourcePath="FarRus.hlf" />
       </dependency>
     </artifact-dependencies>
-    <cleanup>
-      <policy type="builds" cleanup-level="EVERYTHING">
-        <parameters>
-          <param name="keepBuilds.count" value="5" />
-        </parameters>
-      </policy>
-      <policy type="builds" cleanup-level="HISTORY_ENTRY">
-        <parameters>
-          <param name="keepBuilds.count" value="5" />
-        </parameters>
-      </policy>
-      <policy type="builds" cleanup-level="ARTIFACTS">
-        <parameters>
-          <param name="artifactPatterns" value="**/*.*eeeeeeeeeee" />
-          <param name="keepBuilds.count" value="5" />
-        </parameters>
-      </policy>
-      <options>
-        <option name="preventDependenciesArtifactsFromCleanup" value="false" />
-      </options>
-    </cleanup>
+    <cleanup />
   </settings>
 </build-type>
 
