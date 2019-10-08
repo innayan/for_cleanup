@@ -124,7 +124,7 @@ rem exit 1]]></param>
         </parameters>
       </policy>
       <options>
-        <option name="preventDependenciesArtifactsFromCleanup" value="false" />
+        <option name="preventDependenciesArtifactsFromCleanup" value="true" />
       </options>
     </cleanup>
   </settings>
