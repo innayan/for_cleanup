@@ -39,12 +39,11 @@
         <parameters>
           <param name="filters.1.tagsList" value="far_template1" />
           <param name="filters.1.type" value="tags" />
-          <param name="keepData.1.type" value="everything" />
-          <param name="keepData.2.artifactsPatterns" value="+:**/*" />
-          <param name="keepData.2.type" value="artifacts" />
-          <param name="keepData.3.type" value="logs" />
-          <param name="keepData.4.type" value="history" />
-          <param name="keepData.5.type" value="statistics" />
+          <param name="keepData.1.artifactsPatterns" value="+:**/*" />
+          <param name="keepData.1.type" value="artifacts" />
+          <param name="keepData.2.type" value="logs" />
+          <param name="keepData.3.type" value="history" />
+          <param name="keepData.4.type" value="statistics" />
           <param name="limit.type" value="all" />
           <param name="preserveArtifacts" value="true" />
           <param name="ruleDisabled" value="false" />
