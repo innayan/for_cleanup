@@ -8,7 +8,11 @@
     <vcs-settings />
     <requirements />
     <build-triggers />
-    <cleanup />
+    <cleanup>
+      <options>
+        <option name="preventDependenciesArtifactsFromCleanup" value="true" />
+      </options>
+    </cleanup>
   </settings>
 </build-type>
 
