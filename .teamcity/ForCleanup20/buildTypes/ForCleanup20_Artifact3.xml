@@ -73,7 +73,6 @@
     <cleanup>
       <policy type="days" cleanup-level="ARTIFACTS">
         <parameters>
-          <param name="artifactPatterns" value="+:******************************************#########################&amp;&amp;*&amp;*^*^78rrrrrrrrrrrrrrrrrrrrrrrrrretertttttttttttttttttttttttttttttttertttttttttttttttttttttttttttttterterrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrtertertert" />
           <param name="keepDays.count" value="3" />
         </parameters>
       </policy>
