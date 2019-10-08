@@ -6,6 +6,7 @@
     <inherits>
       <ref id="ForCleanup20_FarTemplate" />
       <ref id="ForCleanup20_FormNew" />
+      <ref id="ForCleanup20_FormArtifactRule" />
     </inherits>
     <parameters />
     <build-runners />
