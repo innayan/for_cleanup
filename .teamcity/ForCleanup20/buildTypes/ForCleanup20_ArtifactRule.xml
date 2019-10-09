@@ -16,7 +16,7 @@
     <parameters>
       <param name="test" value="123" spec="text display='hidden' validationMode='any'" />
     </parameters>
-    <build-runners order="RUNNER_147, RUNNER_154, RUNNER_144, RUNNER_157, RUNNER_158">
+    <build-runners order="RUNNER_163, RUNNER_164, RUNNER_147, RUNNER_154, RUNNER_144, RUNNER_157, RUNNER_158">
       <runner id="RUNNER_154" name="template step" type="VS.Solution">
         <parameters>
           <param name="build-file-path" value="we" />
@@ -100,6 +100,19 @@ rem exit 1]]></param>
           <param name="buildFailureOnMessage.messagePattern" value="build" />
           <param name="buildFailureOnMessage.outputText" value="Failure" />
           <param name="buildFailureOnMessage.reverse" value="false" />
+        </parameters>
+      </extension>
+      <extension id="KEEP_RULE_25" type="keepRules">
+        <parameters>
+          <param name="keepData.1.type" value="everything" />
+          <param name="keepData.2.artifactsPatterns" value="+:**/*" />
+          <param name="keepData.2.type" value="artifacts" />
+          <param name="keepData.3.type" value="logs" />
+          <param name="keepData.4.type" value="history" />
+          <param name="keepData.5.type" value="statistics" />
+          <param name="limit.type" value="all" />
+          <param name="preserveArtifacts" value="true" />
+          <param name="ruleDisabled" value="false" />
         </parameters>
       </extension>
     </build-extensions>
