@@ -27,7 +27,7 @@
       </runner>
     </build-runners>
     <vcs-settings>
-      <vcs-entry-ref root-id="ForCleanup20_SvnHttpsLocalhost8443svnArtifacts" />
+      <vcs-entry-ref root-id="ForCleanup20_SvnHttpsLocalhost8443svnArtifacts1" />
     </vcs-settings>
     <requirements />
     <build-triggers />
