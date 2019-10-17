@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="e7eab657-1331-46c8-b4c3-6fb57eba3b3b" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
   <name>For cleanup 2.0</name>
+  <default-template ref="ForCleanup20_FarTemplate" />
   <parameters />
   <project-extensions>
     <extension id="PROJECT_EXT_36" type="buildtype-graphs">
