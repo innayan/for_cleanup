@@ -73,18 +73,15 @@ rem exit 1]]></param>
       </extension>
       <extension id="KEEP_RULE_9" type="keepRules">
         <parameters>
-          <param name="filters.1.status" value="failed" />
-          <param name="filters.1.type" value="buildStatus" />
-          <param name="keepData.1.type" value="every" />
-          <param name="keepData.2.artifactsPatterns" value="" />
-          <param name="keepData.2.type" value="artifact" />
+          <param name="keepData.1.type" value="everything" />
+          <param name="keepData.2.artifactsPatterns" value="+:**/*" />
+          <param name="keepData.2.type" value="artifacts" />
           <param name="keepData.3.type" value="logs" />
           <param name="keepData.4.type" value="history" />
           <param name="keepData.5.type" value="statistics" />
-          <param name="limit.buildsCount" value="2" />
-          <param name="limit.type" value="keepLastNBuilds" />
+          <param name="limit.type" value="all" />
           <param name="preserveArtifacts" value="true" />
-          <param name="ruleDisabled" value="false" />
+          <param name="ruleDisabled" value="true" />
         </parameters>
       </extension>
     </build-extensions>
