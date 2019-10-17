@@ -26,7 +26,14 @@
         </parameters>
       </extension>
     </build-extensions>
-    <cleanup />
+    <cleanup>
+      <policy type="days" cleanup-level="ARTIFACTS">
+        <parameters>
+          <param name="artifactPatterns" value="foo.jar" />
+          <param name="keepDays.count" value="4" />
+        </parameters>
+      </policy>
+    </cleanup>
   </settings>
 </build-type>
 
