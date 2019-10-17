@@ -8,6 +8,24 @@
     <vcs-settings />
     <requirements />
     <build-triggers />
+    <build-extensions>
+      <extension id="KEEP_RULE_35" type="keepRules">
+        <parameters>
+          <param name="filters.1.pattern" value="333" />
+          <param name="filters.1.type" value="branchSpecs" />
+          <param name="filters.2.status" value="successful" />
+          <param name="filters.2.type" value="buildStatus" />
+          <param name="keepData.1.artifactsPatterns" value="+:test.txt" />
+          <param name="keepData.1.type" value="artifacts" />
+          <param name="keepData.2.type" value="logs" />
+          <param name="keepData.3.type" value="history" />
+          <param name="keepData.4.type" value="statistics" />
+          <param name="limit.type" value="all" />
+          <param name="preserveArtifacts" value="true" />
+          <param name="ruleDisabled" value="false" />
+        </parameters>
+      </extension>
+    </build-extensions>
     <cleanup />
   </settings>
 </build-type>
