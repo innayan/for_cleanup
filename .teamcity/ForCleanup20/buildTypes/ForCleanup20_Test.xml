@@ -22,7 +22,7 @@
           <param name="keepData.4.type" value="statistics" />
           <param name="limit.type" value="all" />
           <param name="preserveArtifacts" value="true" />
-          <param name="ruleDisabled" value="false" />
+          <param name="ruleDisabled" value="true" />
         </parameters>
       </extension>
     </build-extensions>
