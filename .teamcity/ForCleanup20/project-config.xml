@@ -173,6 +173,13 @@
       </parameters>
     </extension>
   </project-extensions>
-  <cleanup />
+  <cleanup>
+    <policy type="builds" cleanup-level="ARTIFACTS">
+      <parameters>
+        <param name="artifactPatterns" value="**/*.txt" />
+        <param name="keepBuilds.count" value="4" />
+      </parameters>
+    </policy>
+  </cleanup>
 </project>
 
