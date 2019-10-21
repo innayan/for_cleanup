@@ -68,10 +68,10 @@
       </extension>
     </build-extensions>
     <cleanup>
-      <policy type="days" cleanup-level="ARTIFACTS">
+      <policy type="builds" cleanup-level="ARTIFACTS">
         <parameters>
           <param name="artifactPatterns" value="+:**/*.txt" />
-          <param name="keepDays.count" value="4" />
+          <param name="keepBuilds.count" value="4" />
         </parameters>
       </policy>
     </cleanup>
