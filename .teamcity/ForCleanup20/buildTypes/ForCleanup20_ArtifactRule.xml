@@ -2,7 +2,7 @@
 <build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="fe1d8a98-57ce-48fa-8fd7-2833927ceffa" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
   <name>Artifact rule</name>
   <description />
-  <settings ref="ForCleanup20_FarTemplate">
+  <settings>
     <options>
       <option name="artifactRules" value="**/*.zip&#xA;.svn\wc.db&#xA;*FAR*" />
     </options>
@@ -16,7 +16,14 @@
     <parameters>
       <param name="test" value="123" spec="text display='hidden' validationMode='any'" />
     </parameters>
-    <build-runners order="RUNNER_163, RUNNER_164, RUNNER_147, RUNNER_154, RUNNER_144, RUNNER_157, RUNNER_158">
+    <build-runners>
+      <runner id="RUNNER_147" name="fartemplate_comamnd_line" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="r" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
       <runner id="RUNNER_154" name="template step" type="VS.Solution">
         <parameters>
           <param name="build-file-path" value="we" />
@@ -68,6 +75,7 @@ rem exit 1]]></param>
       </runner>
     </build-runners>
     <vcs-settings>
+      <vcs-entry-ref root-id="ForCleanup20_SvnHttpsLocalhost8443svnArtifacts1" />
       <vcs-entry-ref root-id="ForCleanup20_SvnHttpsLocalhost8443svnArtifacts" />
     </vcs-settings>
     <requirements />
@@ -102,48 +110,56 @@ rem exit 1]]></param>
           <param name="buildFailureOnMessage.reverse" value="false" />
         </parameters>
       </extension>
-      <extension id="KEEP_RULE_32" type="keepRules">
+      <extension id="jetbrains.agent.free.space" type="jetbrains.agent.free.space">
         <parameters>
-          <param name="keepData.1.type" value="everything" />
-          <param name="keepData.2.artifactsPatterns" value="+:**/*" />
-          <param name="keepData.2.type" value="artifacts" />
-          <param name="keepData.3.type" value="logs" />
-          <param name="keepData.4.type" value="history" />
-          <param name="keepData.5.type" value="statistics" />
-          <param name="limit.type" value="all" />
-          <param name="preserveArtifacts" value="true" />
-          <param name="ruleDisabled" value="false" />
+          <param name="free-space-work" value="3gb" />
         </parameters>
       </extension>
-      <extension id="KEEP_RULE_33" type="keepRules">
+      <extension id="KEEP_RULE_19" type="keepRules">
         <parameters>
-          <param name="keepData.1.type" value="everything" />
-          <param name="keepData.2.artifactsPatterns" value="+:**/*" />
-          <param name="keepData.2.type" value="artifacts" />
-          <param name="keepData.3.type" value="logs" />
-          <param name="keepData.4.type" value="history" />
-          <param name="keepData.5.type" value="statistics" />
-          <param name="limit.type" value="all" />
-          <param name="preserveArtifacts" value="true" />
-          <param name="ruleDisabled" value="false" />
-        </parameters>
-      </extension>
-      <extension id="KEEP_RULE_30" type="keepRules">
-        <parameters>
-          <param name="filters.1.tagsList" value="far_template1" />
-          <param name="filters.1.type" value="tags" />
           <param name="keepData.1.artifactsPatterns" value="+:**/*" />
           <param name="keepData.1.type" value="artifacts" />
-          <param name="keepData.2.type" value="logs" />
-          <param name="keepData.3.type" value="history" />
-          <param name="keepData.4.type" value="statistics" />
-          <param name="limit.type" value="all" />
+          <param name="keepData.2.type" value="history" />
+          <param name="keepData.3.type" value="statistics" />
+          <param name="limit.buildsCount" value="3" />
+          <param name="limit.type" value="lastNBuilds" />
+          <param name="preserveArtifacts" value="true" />
+          <param name="ruleDisabled" value="false" />
+        </parameters>
+      </extension>
+      <extension id="KEEP_RULE_20" type="keepRules">
+        <parameters>
+          <param name="keepData.1.type" value="everything" />
+          <param name="keepData.2.artifactsPatterns" value="+:**/*" />
+          <param name="keepData.2.type" value="artifacts" />
+          <param name="keepData.3.type" value="logs" />
+          <param name="keepData.4.type" value="history" />
+          <param name="keepData.5.type" value="statistics" />
+          <param name="limit.buildsCount" value="8" />
+          <param name="limit.type" value="lastNBuilds" />
           <param name="preserveArtifacts" value="true" />
           <param name="ruleDisabled" value="false" />
         </parameters>
       </extension>
     </build-extensions>
-    <cleanup />
+    <cleanup>
+      <policy type="builds" cleanup-level="EVERYTHING">
+        <parameters>
+          <param name="keepBuilds.count" value="1" />
+        </parameters>
+      </policy>
+      <policy type="builds" cleanup-level="HISTORY_ENTRY">
+        <parameters>
+          <param name="keepBuilds.count" value="1" />
+        </parameters>
+      </policy>
+      <policy type="builds" cleanup-level="ARTIFACTS">
+        <parameters>
+          <param name="artifactPatterns" value="**/*.*" />
+          <param name="keepBuilds.count" value="1" />
+        </parameters>
+      </policy>
+    </cleanup>
   </settings>
 </build-type>
 

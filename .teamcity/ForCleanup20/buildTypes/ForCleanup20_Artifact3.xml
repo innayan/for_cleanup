@@ -70,13 +70,7 @@
         </parameters>
       </extension>
     </build-extensions>
-    <cleanup>
-      <policy type="days" cleanup-level="ARTIFACTS">
-        <parameters>
-          <param name="keepDays.count" value="3" />
-        </parameters>
-      </policy>
-    </cleanup>
+    <cleanup />
   </settings>
 </build-type>
 
