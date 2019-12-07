@@ -172,6 +172,13 @@
       </parameters>
     </extension>
   </project-extensions>
-  <cleanup />
+  <cleanup>
+    <policy type="daysAndBuilds" cleanup-level="ARTIFACTS">
+      <parameters>
+        <param name="keepBuilds.count" value="1233333333" />
+        <param name="keepDays.count" value="1222222222" />
+      </parameters>
+    </policy>
+  </cleanup>
 </project>
 
