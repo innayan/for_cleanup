@@ -187,7 +187,7 @@
     </policy>
     <policy type="daysAndBuilds" cleanup-level="ARTIFACTS">
       <parameters>
-        <param name="artifactPatterns" value="+:yyjyjty/tytytyty/tyuyuyuy/y/uyuy/u/yu/y/uy/u/y/y/u/y/uyu/yuy/u/yu/y/uyuyuyuy/yuynhjhjhjhjhjhjhjhhjhj" />
+        <param name="artifactPatterns" value="+:yyjyjty/tytytyty/tyuyuyuy/y/uyuy/u/yu/y/u434y3g345jh34y435y43545334534534534534534534jfdfdfdjfjkfdjkfdkjfdkjddkjfdkdfkfdfdy/u/y/y/u/y/uyu/yuy/u/yu/y/uyuyuyuy/yuynhjhjhjhjhjhjhjhhjhj" />
         <param name="keepBuilds.count" value="1233333333" />
         <param name="keepDays.count" value="1222222222" />
       </parameters>
