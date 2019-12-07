@@ -173,8 +173,21 @@
     </extension>
   </project-extensions>
   <cleanup>
+    <policy type="daysAndBuilds" cleanup-level="EVERYTHING">
+      <parameters>
+        <param name="keepBuilds.count" value="1255555555" />
+        <param name="keepDays.count" value="1234566767" />
+      </parameters>
+    </policy>
+    <policy type="daysAndBuilds" cleanup-level="HISTORY_ENTRY">
+      <parameters>
+        <param name="keepBuilds.count" value="1234567899" />
+        <param name="keepDays.count" value="1234567889" />
+      </parameters>
+    </policy>
     <policy type="daysAndBuilds" cleanup-level="ARTIFACTS">
       <parameters>
+        <param name="artifactPatterns" value="+:yyjyjty/tytytyty/tyuyuyuy/y/uyuy/u/yu/y/uy/u/y/y/u/y/uyu/yuy/u/yu/y/uyuyuyuy/yuynhjhjhjhjhjhjhjhhjhj" />
         <param name="keepBuilds.count" value="1233333333" />
         <param name="keepDays.count" value="1222222222" />
       </parameters>
