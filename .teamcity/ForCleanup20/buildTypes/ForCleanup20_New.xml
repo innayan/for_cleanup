@@ -6,6 +6,9 @@
     <options>
       <option name="artifactRules" value="**/*.zip&#xA;.svn\wc.db&#xA;*FAR*" />
     </options>
+    <disabled-settings>
+      <setting-ref ref="RUNNER_164" />
+    </disabled-settings>
     <parameters>
       <param name="test" value="123" spec="text display='hidden' validationMode='any'" />
     </parameters>
