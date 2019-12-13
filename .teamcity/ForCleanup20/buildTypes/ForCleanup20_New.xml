@@ -65,7 +65,6 @@ rem exit 1]]></param>
       </runner>
     </build-runners>
     <vcs-settings>
-      <vcs-entry-ref root-id="ForCleanup20_SvnHttpsLocalhost8443svnArtifacts1" />
       <vcs-entry-ref root-id="ForCleanup20_SvnHttpsLocalhost8443svnArtifacts" />
     </vcs-settings>
     <requirements />
