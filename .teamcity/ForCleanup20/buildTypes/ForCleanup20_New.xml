@@ -7,6 +7,7 @@
       <option name="artifactRules" value="**/*.zip&#xA;.svn\wc.db&#xA;*FAR*" />
     </options>
     <disabled-settings>
+      <setting-ref ref="RUNNER_144" />
       <setting-ref ref="RUNNER_157" />
       <setting-ref ref="RUNNER_158" />
       <setting-ref ref="RUNNER_164" />
