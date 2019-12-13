@@ -64,7 +64,9 @@ rem exit 1]]></param>
         </parameters>
       </runner>
     </build-runners>
-    <vcs-settings />
+    <vcs-settings>
+      <vcs-entry-ref root-id="Vs1_SvnHttpsLocalhost8443svnJavaEclipse" />
+    </vcs-settings>
     <requirements />
     <build-triggers />
     <build-extensions>
