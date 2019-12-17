@@ -32,11 +32,11 @@
     <build-extensions>
       <extension id="KEEP_RULE_5" type="keepRules">
         <parameters>
-          <param name="filters.1.personality" value="personal" />
+          <param name="filters.1.personal" value="not_personal" />
           <param name="filters.1.type" value="personalBuild" />
           <param name="keepData.1.type" value="statistics" />
           <param name="limit.buildsCount" value="334" />
-          <param name="limit.type" value="keepLastNBuilds" />
+          <param name="limit.type" value="lastNBuilds" />
           <param name="preserveArtifacts" value="true" />
           <param name="ruleDisabled" value="false" />
         </parameters>
