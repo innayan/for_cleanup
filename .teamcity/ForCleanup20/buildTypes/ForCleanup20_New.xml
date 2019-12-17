@@ -154,6 +154,14 @@ rem exit 1]]></param>
           <param name="keepData.1.type" value="everything" />
           <param name="limit.buildsCount" value="30" />
           <param name="limit.type" value="lastNBuilds" />
+          <param name="ruleDisabled" value="false" />
+        </parameters>
+      </extension>
+      <extension id="KEEP_RULE_166" type="keepRules">
+        <parameters>
+          <param name="keepData.1.type" value="everything" />
+          <param name="limit.buildsCount" value="310" />
+          <param name="limit.type" value="lastNBuilds" />
           <param name="preserveArtifacts" value="true" />
           <param name="ruleDisabled" value="false" />
         </parameters>
