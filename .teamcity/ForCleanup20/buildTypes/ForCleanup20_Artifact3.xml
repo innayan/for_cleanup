@@ -57,7 +57,7 @@
       </extension>
       <extension id="KEEP_RULE_17" type="keepRules">
         <parameters>
-          <param name="keepData.1.type" value="everything" />
+          <param name="keepData.1.type" value="history" />
           <param name="keepData.2.artifactsPatterns" value="" />
           <param name="keepData.2.type" value="artifacts" />
           <param name="keepData.3.type" value="logs" />
