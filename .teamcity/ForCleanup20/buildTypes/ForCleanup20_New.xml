@@ -157,7 +157,6 @@ rem exit 1]]></param>
           <param name="keepData.3.type" value="history" />
           <param name="keepData.4.type" value="statistics" />
           <param name="limit.type" value="all" />
-          <param name="preserveArtifacts" value="true" />
           <param name="ruleDisabled" value="false" />
         </parameters>
       </extension>
