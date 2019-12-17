@@ -36,7 +36,6 @@
           <param name="filters.1.type" value="personalBuild" />
           <param name="keepData.1.type" value="statistics" />
           <param name="limit.buildsCount" value="334" />
-          <param name="limit.type" value="lastNBuilds" />
           <param name="preserveArtifacts" value="true" />
           <param name="ruleDisabled" value="false" />
         </parameters>
