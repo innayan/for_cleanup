@@ -49,6 +49,13 @@
           <param name="use.custom.script" value="true" />
         </parameters>
       </runner>
+      <runner id="RUNNER_1571" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="ping 127.0.0.1 -n 20 &gt; nul" />
+          <param name="teamcity.step.mode" value="execute_if_failed" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
       <runner id="RUNNER_158" name="" type="simpleRunner">
         <parameters>
           <param name="script.content" value="ping 127.0.0.1 -n 20 &gt; nul" />
@@ -80,16 +87,6 @@ rem exit 1]]></param>
       <extension id="jetbrains.agent.free.space" type="jetbrains.agent.free.space">
         <parameters>
           <param name="free-space-work" value="3gb" />
-        </parameters>
-      </extension>
-      <extension id="KEEP_RULE_30" type="keepRules">
-        <parameters>
-          <param name="filters.1.tagsList" value="far_template1,new_own" />
-          <param name="filters.1.type" value="tags" />
-          <param name="keepData.2.artifactsPatterns" value="+:**/*" />
-          <param name="limit.type" value="all" />
-          <param name="preserveArtifacts" value="true" />
-          <param name="ruleDisabled" value="false" />
         </parameters>
       </extension>
       <extension id="KEEP_RULE_31" type="keepRules">
@@ -166,10 +163,10 @@ rem exit 1]]></param>
           <param name="ruleDisabled" value="false" />
         </parameters>
       </extension>
-      <extension id="KEEP_RULE_167" type="keepRules">
+      <extension id="KEEP_RULE_1667" type="keepRules">
         <parameters>
           <param name="keepData.1.type" value="everything" />
-          <param name="limit.buildsCount" value="310" />
+          <param name="limit.buildsCount" value="311" />
           <param name="limit.type" value="lastNBuilds" />
           <param name="preserveArtifacts" value="true" />
           <param name="ruleDisabled" value="false" />
