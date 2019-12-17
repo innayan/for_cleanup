@@ -32,6 +32,7 @@
     <build-extensions>
       <extension id="KEEP_RULE_5" type="keepRules">
         <parameters>
+          <param name="filters.1.personality" value="" />
           <param name="filters.1.type" value="personalBuild" />
           <param name="keepData.1.type" value="statistics" />
           <param name="limit.buildsCount" value="334" />
