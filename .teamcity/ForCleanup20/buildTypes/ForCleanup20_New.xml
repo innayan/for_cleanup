@@ -151,12 +151,10 @@ rem exit 1]]></param>
       </extension>
       <extension id="KEEP_RULE_16" type="keepRules">
         <parameters>
-          <param name="keepData.1.artifactsPatterns" value="kjlh,mn" />
-          <param name="keepData.1.type" value="artifacts" />
-          <param name="keepData.2.type" value="logs" />
-          <param name="keepData.3.type" value="history" />
-          <param name="keepData.4.type" value="statistics" />
-          <param name="limit.type" value="all" />
+          <param name="keepData.1.type" value="everything" />
+          <param name="limit.buildsCount" value="30" />
+          <param name="limit.type" value="lastNBuilds" />
+          <param name="preserveArtifacts" value="true" />
           <param name="ruleDisabled" value="false" />
         </parameters>
       </extension>
