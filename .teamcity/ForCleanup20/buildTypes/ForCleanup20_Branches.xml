@@ -77,7 +77,7 @@
       </policy>
       <policy type="daysAndBuilds" cleanup-level="ARTIFACTS">
         <parameters>
-          <param name="artifactPatterns" value="+:dir/dir_with_long_name_to_check_the_window_behavior*.jar" />
+          <param name="artifactPatterns" value="+:dir/*.jar" />
           <param name="keepBuilds.count" value="1000" />
           <param name="keepDays.count" value="100" />
         </parameters>
