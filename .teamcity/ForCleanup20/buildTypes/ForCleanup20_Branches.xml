@@ -42,9 +42,10 @@
       </extension>
       <extension id="KEEP_RULE_137" type="keepRules">
         <parameters>
+          <param name="filters.1.status" value="successful" />
+          <param name="filters.1.type" value="buildStatus" />
           <param name="keepData.1.artifactPatterns" value="+:**/*branches" />
           <param name="keepData.1.type" value="artifacts" />
-          <param name="keepData.2.type" value="logs" />
           <param name="limit.type" value="all" />
           <param name="partitions.1.type" value="perBranch" />
           <param name="preserveArtifacts" value="true" />
