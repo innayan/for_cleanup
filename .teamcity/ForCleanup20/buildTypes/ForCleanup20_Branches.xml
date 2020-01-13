@@ -32,10 +32,15 @@
     <build-extensions>
       <extension id="KEEP_RULE_5" type="keepRules">
         <parameters>
-          <param name="filters.1.personal" value="not_personal" />
-          <param name="filters.1.type" value="personalBuild" />
-          <param name="keepData.1.type" value="statistics" />
-          <param name="limit.buildsCount" value="334" />
+          <param name="filters.1.activity" value="active" />
+          <param name="filters.1.type" value="branchActivity" />
+          <param name="filters.2.pattern"><![CDATA[+:*
++:refs/heads/asasas]]></param>
+          <param name="filters.2.type" value="branchPattern" />
+          <param name="keepData.1.artifactPatterns" value="+:**/*branche1" />
+          <param name="keepData.1.type" value="artifacts" />
+          <param name="keepData.2.type" value="logs" />
+          <param name="limit.type" value="all" />
           <param name="preserveArtifacts" value="true" />
           <param name="ruleDisabled" value="false" />
         </parameters>
