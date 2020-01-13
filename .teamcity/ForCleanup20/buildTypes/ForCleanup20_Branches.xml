@@ -65,6 +65,7 @@
     <cleanup>
       <policy type="daysAndBuilds" cleanup-level="ARTIFACTS">
         <parameters>
+          <param name="artifactPatterns" value="brabbb" />
           <param name="keepBuilds.count" value="1333" />
           <param name="keepDays.count" value="1222" />
         </parameters>
