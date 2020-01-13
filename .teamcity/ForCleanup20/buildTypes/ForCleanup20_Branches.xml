@@ -35,7 +35,9 @@
           <param name="filters.1.activity" value="active" />
           <param name="filters.1.type" value="branchActivity" />
           <param name="filters.2.pattern"><![CDATA[+:*
-+:refs/heads/asasas]]></param>
+-:refs/heads/asasas
+-:refs/heads/e123
+-:refs/heads/errrr]]></param>
           <param name="filters.2.type" value="branchPattern" />
           <param name="keepData.1.artifactPatterns" value="+:**/*branche1" />
           <param name="keepData.1.type" value="artifacts" />
