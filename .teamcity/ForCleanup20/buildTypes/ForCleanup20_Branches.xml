@@ -62,7 +62,11 @@
         </parameters>
       </extension>
     </build-extensions>
-    <cleanup />
+    <cleanup>
+      <options>
+        <option name="disableCleanupPolicies" value="false" />
+      </options>
+    </cleanup>
   </settings>
 </build-type>
 
