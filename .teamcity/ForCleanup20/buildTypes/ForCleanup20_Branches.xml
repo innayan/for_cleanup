@@ -37,7 +37,9 @@
           <param name="filters.2.pattern"><![CDATA[+:*
 -:refs/heads/asasas
 -:refs/heads/e123
--:refs/heads/errrr]]></param>
+-:refs/heads/errrr
++:refs/heads/xxx
++:refs/heads/xxxxxx]]></param>
           <param name="filters.2.type" value="branchPattern" />
           <param name="keepData.1.artifactPatterns" value="+:**/*branche1" />
           <param name="keepData.1.type" value="artifacts" />
