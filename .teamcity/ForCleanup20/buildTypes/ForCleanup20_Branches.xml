@@ -63,7 +63,7 @@
       </extension>
       <extension id="KEEP_RULE_136" type="keepRules">
         <parameters>
-          <param name="filters.1.activity" value="inactive" />
+          <param name="filters.1.activity" value="active" />
           <param name="filters.1.type" value="branchActivity" />
           <param name="filters.2.tagsList" value="rr" />
           <param name="filters.2.type" value="tags" />
