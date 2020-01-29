@@ -2,7 +2,11 @@
 <build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="4119ce3c-0b93-4581-b3c0-ad5d8fb7ad04" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
   <name>new</name>
   <description />
-  <settings ref="ForCleanup20_BranchesTemp1">
+  <settings>
+    <inherits>
+      <ref id="ForCleanup20_BranchesTemp1" />
+      <ref id="ForCleanup20_FarTemplate" />
+    </inherits>
     <options>
       <option name="artifactRules" value="**/*.zip&#xA;.svn\wc.db&#xA;*FAR*" />
     </options>
@@ -17,13 +21,6 @@
       <param name="test" value="123" spec="text display='hidden' validationMode='any'" />
     </parameters>
     <build-runners>
-      <runner id="RUNNER_147" name="fartemplate_comamnd_line" type="simpleRunner">
-        <parameters>
-          <param name="script.content" value="r" />
-          <param name="teamcity.step.mode" value="default" />
-          <param name="use.custom.script" value="true" />
-        </parameters>
-      </runner>
       <runner id="RUNNER_163" name="" type="simpleRunner">
         <parameters>
           <param name="script.content" value="echo new" />
@@ -84,11 +81,6 @@ rem exit 1]]></param>
     <requirements />
     <build-triggers />
     <build-extensions>
-      <extension id="jetbrains.agent.free.space" type="jetbrains.agent.free.space">
-        <parameters>
-          <param name="free-space-work" value="3gb" />
-        </parameters>
-      </extension>
       <extension id="KEEP_RULE_31" type="keepRules">
         <parameters>
           <param name="filters.1.tagsList" value="far_template2,new_own2" />
