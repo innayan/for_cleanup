@@ -7,10 +7,8 @@
       <ref id="ForCleanup20_BranchesTemp1" />
       <ref id="ForCleanup20_FarTemplate" />
       <ref id="ForCleanup20_FormNew" />
+      <ref id="ForCleanup20_FormArtifactRule" />
     </inherits>
-    <options>
-      <option name="artifactRules" value="**/*.zip&#xA;.svn\wc.db&#xA;*FAR*" />
-    </options>
     <disabled-settings>
       <setting-ref ref="RUNNER_144" />
       <setting-ref ref="RUNNER_147" />
@@ -18,24 +16,8 @@
       <setting-ref ref="RUNNER_158" />
       <setting-ref ref="RUNNER_164" />
     </disabled-settings>
-    <parameters>
-      <param name="test" value="123" spec="text display='hidden' validationMode='any'" />
-    </parameters>
-    <build-runners>
-      <runner id="RUNNER_157" name="" type="simpleRunner">
-        <parameters>
-          <param name="script.content" value="ping 127.0.0.1 -n 20 &gt; nul" />
-          <param name="teamcity.step.mode" value="execute_if_failed" />
-          <param name="use.custom.script" value="true" />
-        </parameters>
-      </runner>
-      <runner id="RUNNER_1571" name="" type="simpleRunner">
-        <parameters>
-          <param name="script.content" value="ping 127.0.0.1 -n 20 &gt; nul" />
-          <param name="teamcity.step.mode" value="execute_if_failed" />
-          <param name="use.custom.script" value="true" />
-        </parameters>
-      </runner>
+    <parameters />
+    <build-runners order="RUNNER_146, RUNNER_159, RUNNER_147, RUNNER_163, RUNNER_164, RUNNER_157, RUNNER_158, RUNNER_144">
       <runner id="RUNNER_158" name="" type="simpleRunner">
         <parameters>
           <param name="script.content" value="ping 127.0.0.1 -n 20 &gt; nul" />
