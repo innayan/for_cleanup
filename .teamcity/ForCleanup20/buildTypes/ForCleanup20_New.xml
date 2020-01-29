@@ -16,7 +16,9 @@
       <setting-ref ref="RUNNER_157" />
       <setting-ref ref="RUNNER_164" />
     </disabled-settings>
-    <parameters />
+    <parameters>
+      <param name="dd" value="credentialsJSON:68f3655a-389a-497b-bedb-2472c09275d8" spec="password display='normal'" />
+    </parameters>
     <build-runners order="RUNNER_146, RUNNER_159, RUNNER_147, RUNNER_163, RUNNER_164, RUNNER_157, RUNNER_158, RUNNER_4, RUNNER_144">
       <runner id="RUNNER_144" name="" type="simpleRunner">
         <parameters>
