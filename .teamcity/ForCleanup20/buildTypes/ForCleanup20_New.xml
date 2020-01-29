@@ -6,6 +6,7 @@
     <inherits>
       <ref id="ForCleanup20_BranchesTemp1" />
       <ref id="ForCleanup20_FarTemplate" />
+      <ref id="ForCleanup20_FormNew" />
     </inherits>
     <options>
       <option name="artifactRules" value="**/*.zip&#xA;.svn\wc.db&#xA;*FAR*" />
@@ -21,24 +22,6 @@
       <param name="test" value="123" spec="text display='hidden' validationMode='any'" />
     </parameters>
     <build-runners>
-      <runner id="RUNNER_163" name="" type="simpleRunner">
-        <parameters>
-          <param name="script.content" value="echo new" />
-          <param name="teamcity.step.mode" value="default" />
-          <param name="use.custom.script" value="true" />
-        </parameters>
-      </runner>
-      <runner id="RUNNER_164" name="" type="FxCop">
-        <parameters>
-          <param name="fxcop.detection_mode" value="auto" />
-          <param name="fxcop.fail_on_analysis_error" value="true" />
-          <param name="fxcop.files" value="ewewewewe" />
-          <param name="fxcop.search_in_gac" value="true" />
-          <param name="fxcop.version" value="not_specified" />
-          <param name="fxcop.what" value="files" />
-          <param name="teamcity.step.mode" value="default" />
-        </parameters>
-      </runner>
       <runner id="RUNNER_157" name="" type="simpleRunner">
         <parameters>
           <param name="script.content" value="ping 127.0.0.1 -n 20 &gt; nul" />
@@ -91,20 +74,6 @@ rem exit 1]]></param>
           <param name="keepData.3.type" value="logs" />
           <param name="keepData.4.type" value="history" />
           <param name="keepData.5.type" value="statistics" />
-          <param name="limit.type" value="all" />
-          <param name="preserveArtifacts" value="true" />
-          <param name="ruleDisabled" value="false" />
-        </parameters>
-      </extension>
-      <extension id="KEEP_RULE_22" type="keepRules">
-        <parameters>
-          <param name="filters.1.tagsList" value="form_new1" />
-          <param name="filters.1.type" value="tags" />
-          <param name="keepData.1.artifactsPatterns" value="+:*.new1" />
-          <param name="keepData.1.type" value="artifacts" />
-          <param name="keepData.2.type" value="logs" />
-          <param name="keepData.3.type" value="history" />
-          <param name="keepData.4.type" value="statistics" />
           <param name="limit.type" value="all" />
           <param name="preserveArtifacts" value="true" />
           <param name="ruleDisabled" value="false" />
