@@ -8,23 +8,16 @@
       <ref id="ForCleanup20_FarTemplate" />
       <ref id="ForCleanup20_FormNew" />
       <ref id="ForCleanup20_FormArtifactRule" />
+      <ref id="Defaukt" />
     </inherits>
     <disabled-settings>
       <setting-ref ref="RUNNER_144" />
       <setting-ref ref="RUNNER_147" />
       <setting-ref ref="RUNNER_157" />
-      <setting-ref ref="RUNNER_158" />
       <setting-ref ref="RUNNER_164" />
     </disabled-settings>
     <parameters />
-    <build-runners order="RUNNER_146, RUNNER_159, RUNNER_147, RUNNER_163, RUNNER_164, RUNNER_157, RUNNER_158, RUNNER_144">
-      <runner id="RUNNER_158" name="" type="simpleRunner">
-        <parameters>
-          <param name="script.content" value="ping 127.0.0.1 -n 20 &gt; nul" />
-          <param name="teamcity.step.mode" value="execute_if_failed" />
-          <param name="use.custom.script" value="true" />
-        </parameters>
-      </runner>
+    <build-runners order="RUNNER_146, RUNNER_159, RUNNER_147, RUNNER_163, RUNNER_164, RUNNER_157, RUNNER_158, RUNNER_4, RUNNER_144">
       <runner id="RUNNER_144" name="" type="simpleRunner">
         <parameters>
           <param name="script.content"><![CDATA[echo test
