@@ -3,6 +3,10 @@
   <name>Branches</name>
   <description />
   <settings>
+    <options>
+      <option name="branchFilter" value="+:*&#xD;&#xA;-:&lt;default&gt;" />
+      <option name="excludeDefaultBranchChanges" value="true" />
+    </options>
     <parameters />
     <build-runners>
       <runner id="RUNNER_146" name="" type="Maven2">
