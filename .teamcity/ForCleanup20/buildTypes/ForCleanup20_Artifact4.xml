@@ -11,6 +11,7 @@
       <setting-ref ref="TRIGGER_13" />
     </disabled-settings>
     <parameters>
+      <param name="pass1112" value="credentialsJSON:c09d1327-9373-4044-b119-07d38db29e56" spec="password display='normal'" />
       <param name="system.teamcity.debug.dump.parameters" value="true" />
     </parameters>
     <build-runners>
