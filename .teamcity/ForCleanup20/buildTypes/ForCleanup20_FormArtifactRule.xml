@@ -6,7 +6,7 @@
       <option name="artifactRules" value="**/*.zip&#xA;.svn\wc.db&#xA;*FAR*" />
     </options>
     <parameters>
-      <param name="test" value="credentialsJSON:5a31d7f5-dac4-41b1-8c25-c0946e249756" spec="text display='hidden' validationMode='any'" />
+      <param name="test" value="credentialsJSON:d8c0b8e9-16a8-4fd6-9750-c0f37801dc19" spec="text display='hidden' validationMode='any'" />
     </parameters>
     <build-runners>
       <runner id="RUNNER_157" name="" type="simpleRunner">
